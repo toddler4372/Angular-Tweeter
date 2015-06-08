@@ -316,13 +316,23 @@ module.exports = function (grunt) {
             'fonts/*'
           ]
         }, {
-          expand: true,
-          cwd: '.tmp/images',
-          dest: '<%= yeoman.dist %>/images',
-          src: ['generated/*']
+        expand: true,
+        cwd: '.tmp/images',
+        dest: '<%= yeoman.dist %>/images',
+        src: ['generated/*']
+        }, {
+        expand: true,
+        cwd: 'bower_components/semantic-ui/dist',
+        src: 'themes/**/*',
+        dest: '<%= yeoman.dist %>'
+        }, {
+        expand: true,
+        cwd: 'bower_components/semantic-ui/dist',
+        src: 'components/*',
+        dest: '<%= yeoman.dist %>'
         }]
-      },
-      styles: {
+        },
+        styles: {
         expand: true,
         cwd: '<%= yeoman.app %>/styles',
         dest: '.tmp/styles/',

@@ -14,6 +14,7 @@
   <!-- endbower -->
   <!-- endbuild -->
   <!-- build:css(.tmp) styles/main.css -->
+  <link rel="stylesheet" href="bower_components/semantic-ui/dist/semantic.css" />
   <link rel="stylesheet" href="bower_components/html5-boilerplate/css/main.css">
   <link rel="stylesheet" type="text/css" href="styles/main.css" />
   <!--<link rel="stylesheet/less" type="text/css" href="styles/styles.less" />-->
@@ -24,59 +25,57 @@
 </head>
 
 <body>
-  <div class="full-width">
-    <div id="wrap">
-      <header>
-        <div id="top-links-wrapper">
-          <div id="top-links">
-            <a href="#/allPosts" ng-class="getClass('/allPosts')" id="logo-home"><img src="images/logo.png" alt="Simply Social" id="logo"></a>
-            <ul class="menu-top">
-              <li><a href="#/allPosts"><img src="images/new-message.png" alt="New Message" id="message"></a></li>
-              <li id="search-input"><div class="input"><input type="text" class="search" maxlength="18"><a href="" id="search-area"></a></div></li>
-              <li id="search-mobile"><a href=""><img src="images/search-mobile.png" alt="Search" id="search-icon"></a></li>
-              <li><a href=""><img src="images/avatar.jpg" alt="avatar" id="avatar"></a></li>
-              <li>
-                <div id="modal-wrapper">
-                  <ul class="account">
-                    <li><a href="#"><img src="images/arrow.png" alt="arrow"></a>
-                      <ul class="account-menu dialog">
-                        <li><a href="">Profile</a></li>
-                        <li><a href="">Followers</a></li>
-                        <li><a href="">Following</a></li>
-                        <li style="border:none;"><a href="#/Settings" id="hide-header">Settings</a></li>
+        <div class="ui padded grid" id="header-section">
+          <div class="sixteen wide column row" id="header-content">
+            <div class="eight wide column">
+              <a href="#/allPosts" ng-class="getClass('/allPosts')" id="logo-home"><img src="images/tweeter-logo.svg" alt="Tweeter" id="logo"></a>
+            </div>
+            <div class="eight wide column" id="header-list">
+                <div class="ui horizontal list" id="right-menu">
+                  <div class="item"><a href="#/allPosts"><i class="white comment large icon"></i></a></div>
+                  <div class="item"><div class="mini ui icon input"><input type="text" placeholder="Search..."><i class="search icon"></i></div></div>
+                  <div class="item"><a href=""><img src="images/avatar.jpg" alt="avatar" id="avatar"></a></div>
+                  <div class="item">
+                      <ul class="account">
+                        <li><a href="#"><img src="images/arrow.png" alt="arrow"></a>
+                          <ul class="account-menu dialog">
+                            <li><a href="">Profile</a></li>
+                            <li><a href="">Followers</a></li>
+                            <li><a href="">Following</a></li>
+                            <li style="border:none;"><a href="#/Settings" id="hide-header">Settings</a></li>
+                          </ul>
+                        </li>
                       </ul>
-                    </li>
-                  </ul>
-                </div>
-              </li>
-            </ul>
-        </div>
-      </div>
-      </header>
-          <section id="add-post">
-            <div id="menu-bg">
-              <div class="post-input center-area vertical-align">
-                <div class="center-area middle-align">
-                  <input type="text" placeholder="What's on your mind?" class="post-form">
-                    <ul class="add-items">
-                      <li><a href=""><img src="images/photo-icon.png" alt="Add Photo" id="icon-photo">Add Photo</a></li>
-                      <li><a href=""><img src="images/video-icon.png" alt="Add Video" id="icon-video">Add Video</a></li>
-                    </ul>
-                </div>
-              </div>
-                <div class="center-area">
-                  <div class="bottom-align">
-                    <ul class="menu">
-                      <li><a href="#/allPosts">All Posts</a></li>
-                      <li><a href="#/Photos">Photos</a></li>
-                      <li><a href="#/Videos">Videos</a></li>
-                      <li><a href="" style="border-bottom:none;"><img src="images/grid-view.png" alt="Grid View" id="grid"></a></li>
-                      <li><a href="" style="border-bottom:none;"><img src="images/list-view.png" alt="List View" id="list"></a></li>
-                    </ul>
                   </div>
                 </div>
             </div>
-          </section>      
+          </div>
+        </div>
+          <div class="sixteen wide column">
+            <section id="add-post">
+              <div id="menu-bg">
+                <div class="post-input center-area vertical-align">
+                  <div class="center-area middle-align">
+                    <input type="text" placeholder="What's on your mind?" class="post-form">
+                      <ul class="add-items">
+                        <li><a href=""><img src="images/photo-icon.png" alt="Add Photo" id="icon-photo">Add Photo</a></li>
+                        <li><a href=""><img src="images/video-icon.png" alt="Add Video" id="icon-video">Add Video</a></li>
+                      </ul>
+                  </div>
+                </div>
+                  <div class="center-area">
+                    <div class="bottom-align">
+                      <ul class="menu">
+                        <li><a href="#/allPosts">All Posts</a></li>
+                        <li><a href="#/Photos">Photos</a></li>
+                        <li><a href="#/Videos">Videos</a></li>
+                        <li><a href="" style="border-bottom:none;"><img src="images/grid-view.png" alt="Grid View" id="grid"></a></li>
+                        <li><a href="" style="border-bottom:none;"><img src="images/list-view.png" alt="List View" id="list"></a></li>
+                      </ul>
+                    </div>
+                  </div>
+              </div>
+            </section>      
 
     <!--[if lt IE 7]>
         <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -96,7 +95,8 @@
       </div>
     </footer>
   </div>
-</div>
+
+
 
   <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
