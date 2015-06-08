@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Test App</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- build:css(.) styles/vendor.css -->
+  <!-- bower:css -->
+  <!-- endbower -->
+  <!-- endbuild -->
+  <!-- build:css(.tmp) styles/main.css -->
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/css/main.css">
+  <link rel="stylesheet" type="text/css" href="styles/main.css" />
+  <!--<link rel="stylesheet/less" type="text/css" href="styles/styles.less" />-->
+  <!-- endbuild -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,100' rel='stylesheet' type='text/css'>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <div class="full-width">
+    <div id="wrap">
+      <header>
+        <div id="top-links-wrapper">
+          <div id="top-links">
+            <a href="#/allPosts" ng-class="getClass('/allPosts')" id="logo-home"><img src="images/logo.png" alt="Simply Social" id="logo"></a>
+            <ul class="menu-top">
+              <li><a href="#/allPosts"><img src="images/new-message.png" alt="New Message" id="message"></a></li>
+              <li id="search-input"><div class="input"><input type="text" class="search" maxlength="18"><a href="" id="search-area"></a></div></li>
+              <li id="search-mobile"><a href=""><img src="images/search-mobile.png" alt="Search" id="search-icon"></a></li>
+              <li><a href=""><img src="images/avatar.jpg" alt="avatar" id="avatar"></a></li>
+              <li>
+                <div id="modal-wrapper">
+                  <ul class="account">
+                    <li><a href="#"><img src="images/arrow.png" alt="arrow"></a>
+                      <ul class="account-menu dialog">
+                        <li><a href="">Profile</a></li>
+                        <li><a href="">Followers</a></li>
+                        <li><a href="">Following</a></li>
+                        <li style="border:none;"><a href="#/Settings" id="hide-header">Settings</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+        </div>
+      </div>
+      </header>
+          <section id="add-post">
+            <div id="menu-bg">
+              <div class="post-input center-area vertical-align">
+                <div class="center-area middle-align">
+                  <input type="text" placeholder="What's on your mind?" class="post-form">
+                    <ul class="add-items">
+                      <li><a href=""><img src="images/photo-icon.png" alt="Add Photo" id="icon-photo">Add Photo</a></li>
+                      <li><a href=""><img src="images/video-icon.png" alt="Add Video" id="icon-video">Add Video</a></li>
+                    </ul>
+                </div>
+              </div>
+                <div class="center-area">
+                  <div class="bottom-align">
+                    <ul class="menu">
+                      <li><a href="#/allPosts">All Posts</a></li>
+                      <li><a href="#/Photos">Photos</a></li>
+                      <li><a href="#/Videos">Videos</a></li>
+                      <li><a href="" style="border-bottom:none;"><img src="images/grid-view.png" alt="Grid View" id="grid"></a></li>
+                      <li><a href="" style="border-bottom:none;"><img src="images/list-view.png" alt="List View" id="list"></a></li>
+                    </ul>
+                  </div>
+                </div>
+            </div>
+          </section>      
+
+    <!--[if lt IE 7]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <div ng-view></div>
+
+    <footer>
+      <div class="footer-links center-area">
+        <ul>
+            <li><a href="">ABOUT US</a></li>
+            <li><a href="">SUPPORT</a></li>
+            <li><a href="">PRIVACY</a></li>
+            <li><a href="">TERMS</a></li>
+            <li id="copyright"><span>&copy;</span> 2014 SIMPLYSOCIAL</li>
+        </ul>
+      </div>
+    </footer>
+  </div>
+</div>
+
+  <!-- In production use:
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+  -->
+  <!-- build:js(.) scripts/vendor.js -->
+  <!-- bower:js -->
+  <script src="bower_components/es5-shim/es5-shim.js"></script>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/json3/lib/json3.js"></script>
+  <script src="bower_components/angular-resource/angular-resource.js"></script>
+  <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+  <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+  <script src="bower_components/angular-animate/angular-animate.js"></script>
+  <script src="bower_components/angular-touch/angular-touch.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/firebase/firebase.js"></script>
+  <script src="bower_components/firebase-simple-login/firebase-simple-login.js"></script>
+  <script src="bower_components/mockfirebase/dist/mockfirebase.js"></script>
+  <script src="bower_components/angularfire/dist/angularfire.min.js"></script>
+  <script src="bower_components/angular-mocks/angular-mocks.js"></script>
+  <script src="bower_components/angular-loader/angular-loader.js"></script>
+  <!-- endbower -->
+  <!-- endbuild -->
+
+  <!-- build:js({.tmp,app}) scripts/scripts.js -->
+  <script src="app.js"></script>
+  <!--<script src="/node_modules/less/dist/less.js" type="text/javascript"></script>-->
+  <script src="allPosts/allPosts.js"></script>
+  <script src="Photos/Photos.js"></script>
+  <script src="Videos/Videos.js"></script>
+  <script src="Settings/Settings.js"></script>
+  <script src="components/version/version.js"></script>
+  <script src="components/version/version-directive.js"></script>
+  <script src="components/version/interpolate-filter.js"></script>
+  <script src="js/modal.js"></script>
+  <!-- endbuild -->
+  
+  <!-- DROPDOWN -->
+  <script>
+    $(document).ready(function() {
+      $('.account > li').bind('mouseover', openSubMenu);
+      $('.account > li').bind('mouseout', closeSubMenu);
+      
+      function openSubMenu() {
+        $(this).find('ul').css('visibility', 'visible');  
+      };
+      
+      function closeSubMenu() {
+        $(this).find('ul').css('visibility', 'hidden'); 
+      };
+             
+    });
+  </script>
+
+  <!-- MODAL DROPDOWN -->
+  <script>
+    $( "#hide-header" ).click(function() {
+      $( "#menu-bg" ).hide() 
+    });
+  </script>
+
+  <script>
+    $( "#logo-home" ).click(function() {
+      $( "#menu-bg" ).show() 
+    });
+  </script>
+
+  <!-- COLLAPSIBLE DIV -->
+  <script>
+    $(document).ready(function(){
+        $(".btn-primary").click(function(){
+            $(".collapse").collapse('toggle');
+        });
+    });
+  </script>
+
+</body>
+</html>

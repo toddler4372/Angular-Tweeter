@@ -1,0 +1,110 @@
+<style>
+#modal {
+    left: 25%;
+    width: 955px !important;
+    height: 753px !important;
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+#content {
+    width: 955px !important;
+    height: 753px !important;
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+.popup-input, .feed-box {
+    width: 955px !important;
+    height: 753px !important;
+    padding: 0;
+    margin: 0;
+    border: none;
+    border-radius: .3em;
+}
+.photo-submit {
+    padding: 0;
+}
+#photo {
+    width: 973px;
+    height: 582px;
+}
+.comment {min-height: 85px;background: #FFF;}
+input.reply {
+  width: 908px;
+  margin-left: 23px;
+  margin-top: 15px;
+  padding: 5px 15px;
+}
+.col-wrapper {
+    width: 100%;
+    height: 100%;
+}
+.text {padding-top: 4px;}
+.avatar {width: 5%;}
+.post-content {width: 91%;}
+.pull-right {padding-right: 28px;}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    #modal, #content, .popup-input, .feed-box, #photo, .comment, input.reply {max-width: 700px;}
+    .post-content {width: 87%;}
+    input.reply {width: 654px;}
+}
+@media only screen and (min-width: 575px) and (max-width: 767px) {
+    #modal, #content, .popup-input, .feed-box, #photo, .comment, input.reply {max-width: 540px;}
+    .post-content {width: 87%;}
+    input.reply {width: 495px;margin-top: 9px;}
+    #modal {left: 5%;}
+    .text {line-height: 1.1em;}
+    .comment {min-height: 100px;}
+}
+@media only screen and (min-width: 400px) and (max-width: 574px) {
+    #modal, #content, .popup-input, .feed-box, #photo, .comment, input.reply {max-width: 400px;max-height: 400px;}
+    .post-content {width: 84%;}
+    input.reply {width: 373px;margin-top: 4px;margin-left: 14px;}
+    #modal {left: 5%;}
+    .text {line-height: 1.1em;}
+    .comment {min-height: 100px;}
+    .fee-box {height: ;}
+    .avatar {width: 3%;margin-left: 14px;}
+    .pull-right {padding-right: 14px;}
+}
+</style>
+
+<div class="popup-input">
+    <div class="feed-box">
+        <div class="photo-submit">
+            <a href="#" id="photo"><img src="images/pic1-large.jpg"></a>
+        </div>
+        <div class="comments">
+          <div class="comment">
+            <a class="avatar">
+                <div class="center">
+                    <img src="images/meg.jpg">
+                </div>
+            </a>
+            <div class="post-content">
+              <a class="author">Meg Robichaud</a>
+              <div class="metadata pull-right">
+                <div class="date">
+                  <ul class="margin-zero">
+                    <li><a href=""><img src="images/reply.png" alt="Add Photo" id="reply"></a></li>
+                    <li><div class="like"></div></li>
+                    <li class="time-posted">25m</li>
+                </ul>
+            </div>
+        </div>
+        <div class="text">
+            My view this morning is simply beautiful... <a href="">instagram.com/p/mV0PUrHRwQ/</a>
+        </div>
+    </div>
+</div>
+<div class="col-wrapper">
+    <input type="text" placeholder="Reply..." class="reply" maxlength="30">
+</div>
+</div>
+</div>
+</div>
+
+
+
