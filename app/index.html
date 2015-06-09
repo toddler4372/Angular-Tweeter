@@ -6,21 +6,20 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Test App</title>
+  <title>Tweeter</title>
   <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
   <!-- build:css(.) styles/vendor.css -->
   <!-- bower:css -->
+  <link rel="stylesheet" href="bower_components/semantic-ui/dist/semantic.css" />
   <!-- endbower -->
   <!-- endbuild -->
   <!-- build:css(.tmp) styles/main.css -->
-  <link rel="stylesheet" href="bower_components/semantic-ui/dist/semantic.css" />
   <link rel="stylesheet" href="bower_components/html5-boilerplate/css/main.css">
   <link rel="stylesheet" type="text/css" href="styles/main.css" />
   <!--<link rel="stylesheet/less" type="text/css" href="styles/styles.less" />-->
   <!-- endbuild -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
-  <link href='https://fonts.googleapis.com/css?family=Roboto:400,100' rel='stylesheet' type='text/css'>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 </head>
 
@@ -32,34 +31,59 @@
             </div>
             <div class="eight wide column" id="header-list">
                 <div class="ui horizontal list" id="right-menu">
-                  <div class="item"><a href="#/allPosts"><i class="white comment large icon"></i></a></div>
-                  <div class="item"><div class="mini ui icon input"><input type="text" placeholder="Search..."><i class="search icon"></i></div></div>
-                  <div class="item"><a href=""><img src="images/avatar.jpg" alt="avatar" id="avatar"></a></div>
+                  <div class="item" id="add-post"><a href="#/allPosts"><i class="white comment large icon"></i></a></div>
                   <div class="item">
-                      <ul class="account">
-                        <li><a href="#"><img src="images/arrow.png" alt="arrow"></a>
-                          <ul class="account-menu dialog">
-                            <li><a href="">Profile</a></li>
-                            <li><a href="">Followers</a></li>
-                            <li><a href="">Following</a></li>
-                            <li style="border:none;"><a href="#/Settings" id="hide-header">Settings</a></li>
-                          </ul>
-                        </li>
-                      </ul>
+                    <div class="ui labeled icon top right pointing dropdown">
+                      <div class="item"><i class="white large search icon" id="mobile-search-icon"></i></div>
+                      <div class="menu">
+                        <div class="ui icon input">
+                          <i class="search icon"></i>
+                          <input type="text" name="search" placeholder="Search...">
+                        </div>
+                      </div>
+                    </div> 
+                    <div class="mini ui icon input">
+                      <input type="text" placeholder="Search..."><i class="large search icon" id="input-search-icon"></i>
+                    </div>
                   </div>
-                </div>
+                  <div class="item">
+                      <div class="ui top right pointing dropdown">
+                        <i class="white large user icon"></i>
+                        <div class="menu">
+                          <div class="item"><i class="user icon"></i><a href="#">Profile</a></div>
+                          <div class="item"><i class="users icon"></i><a href="#">Followers</a></div>
+                          <div class="item"><i class="unhide icon"></i><a href="#">Following</a></div>
+                          <div class="item"><i class="setting icon"></i><a href="#/Settings">Settings</a></div>
+                        </div>
+                      </div>
+                  </div>
             </div>
           </div>
         </div>
+      </div>
           <div class="sixteen wide column">
             <section id="add-post">
               <div id="menu-bg">
                 <div class="post-input center-area vertical-align">
                   <div class="center-area middle-align">
-                    <input type="text" placeholder="What's on your mind?" class="post-form">
+                    <div class="massive ui transparent icon input" id="tweet-input"><input type="text" placeholder="What's on your brain?"><i class="white send icon" id="send-tweet-icon"></i></div>
                       <ul class="add-items">
-                        <li><a href=""><img src="images/photo-icon.png" alt="Add Photo" id="icon-photo">Add Photo</a></li>
-                        <li><a href=""><img src="images/video-icon.png" alt="Add Video" id="icon-video">Add Video</a></li>
+                        <li>
+                          <a href="">
+                            <div class="ui basic button">
+                              <i class="large white icon photo"></i>
+                              Add Photo
+                            </div>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="">
+                            <div class="ui basic button">
+                              <i class="large white icon video play"></i>
+                              Add Video
+                            </div>
+                          </a>
+                        </li>
                       </ul>
                   </div>
                 </div>
@@ -75,13 +99,32 @@
                     </div>
                   </div>
               </div>
-            </section>      
+            </section>  
+
+            <!-- ADD POST MODAL -->
+            <div class="ui fullscreen modal">
+              <i class="close icon"></i>
+              <div class="content">
+                <div class="ui form">
+                  <h4 class="ui header">Add new tweet</h4>
+                  <div class="field">
+                    <textarea></textarea>
+                  </div>
+                </div>
+              </div>
+              <div class="actions">
+                <div class="ui large button">Cancel</div>
+                <div class="ui large blue button" id="submit-tweet">Tweet</div>
+              </div>
+            </div>
+
+            
 
     <!--[if lt IE 7]>
         <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <div ng-view></div>
+    <div ng-view id="feed-section"></div>
 
     <footer>
       <div class="footer-links center-area">
@@ -90,7 +133,7 @@
             <li><a href="">SUPPORT</a></li>
             <li><a href="">PRIVACY</a></li>
             <li><a href="">TERMS</a></li>
-            <li id="copyright"><span>&copy;</span> 2014 SIMPLYSOCIAL</li>
+            <li id="copyright"><span>&copy;</span> 2015 TWEETER</li>
         </ul>
       </div>
     </footer>
@@ -103,6 +146,7 @@
   -->
   <!-- build:js(.) scripts/vendor.js -->
   <!-- bower:js -->
+  <script src="bower_components/jquery/dist/jquery.js"></script>
   <script src="bower_components/es5-shim/es5-shim.js"></script>
   <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/json3/lib/json3.js"></script>
@@ -118,6 +162,7 @@
   <script src="bower_components/angularfire/dist/angularfire.min.js"></script>
   <script src="bower_components/angular-mocks/angular-mocks.js"></script>
   <script src="bower_components/angular-loader/angular-loader.js"></script>
+  <script src="bower_components/semantic-ui/dist/semantic.js"></script>
   <!-- endbower -->
   <!-- endbuild -->
 
@@ -171,6 +216,22 @@
             $(".collapse").collapse('toggle');
         });
     });
+  </script>
+
+  <!-- SEMANTIC MODAL DROPDOWN -->
+  <script>
+    $('.dropdown').dropdown({
+        // you can use any ui transition
+        transition: 'drop'
+    });
+  </script>
+
+  <!-- SEMANTIC MODAL POPUP -->
+  <script>
+    $('.ui.modal')
+      .modal('attach events', '#add-post')
+      .modal('setting', 'transition', 'drop')
+    ;
   </script>
 
 </body>

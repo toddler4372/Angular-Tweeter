@@ -93,30 +93,6 @@ textarea {
     padding: 0.2em 0;
 }
 
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ==========================================================================
-   Helper classes
-   ========================================================================== */
-
 /*
  * Image replacement
  */
@@ -346,29 +322,21 @@ h2,
 h3,
 h4,
 h5,
-a {
-  font-family: 'Roboto', Arial, sans-serif;
-}
-h1 {
-  font-size: 30px;
-  font-weight: 600;
-  font-family: 'Roboto', sans-serif;
-  color: #3f454d;
-  margin-top: 40px;
-  margin-bottom: 5px;
-}
+
 li {
   list-style: none;
 }
 body {
   background: #FFF;
+  overflow: hidden;
+  width: 100%;
 }
 #message {
   padding-right: 8px;
 }
 #logo {
-  padding-left: 100px;
-  max-width: 260px;
+  max-width: 160px;
+  max-height: 53.9375px;
   padding-top: 4px;
 }
 .menu-top {
@@ -410,7 +378,6 @@ a#change-pw {
 input.search {
   width: 200px;
   height: 30px;
-  font-family: 'Roboto', Arial, sans-serif;
   color: #FFF;
   margin-left: 10px;
   font-weight: 200;
@@ -473,15 +440,15 @@ a#arrow {
   width: 575px;
 }
 #menu-bg {
-  background: url(../images/bg.jpg) no-repeat;
+  background: url(../images/bg.jpg) center no-repeat;
   background-size: cover;
   width: 100%;
   height: 485px;
 }
 .bottom-align {
   position: absolute;
-  bottom: 13px;
-  height: 40px;
+  bottom: 14px;
+  height: 36px;
   width: 575px;
 }
 .middle-align {
@@ -496,7 +463,6 @@ a#arrow {
   padding-right: 20px;
 }
 .bottom-align ul li a {
-  font-family: 'Roboto', Arial, sans-serif;
   text-transform: uppercase;
   color: #FFF;
   font-weight: 400;
@@ -509,7 +475,7 @@ a#arrow {
 .bottom-align ul li a:active,
 .bottom-align ul li a:focus {
   text-decoration: none;
-  border-bottom: medium solid #FF8F00;
+  border-bottom: thick solid #FF8F00;
   outline: 0;
 }
 input.post-form {
@@ -517,7 +483,6 @@ input.post-form {
   background: none;
   border: none;
   height: 50px;
-  font-family: 'Roboto', Arial, sans-serif;
   font-size: 32px;
   color: #FFF;
   position: relative;
@@ -533,9 +498,8 @@ input.post-form {
 }
 .add-items li a {
   text-decoration: none;
-  margin-right: 30px;
+  margin-right: 0px;
   color: #FFF;
-  font-family: 'Roboto', Arial, sans-serif;
   font-weight: 100;
   font-size: 14px;
   letter-spacing: 1px;
@@ -546,16 +510,20 @@ input.post-form {
   padding-right: 8px;
 }
 ::-webkit-input-placeholder {
+  font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   color: #FFF;
   font-weight: 100;
 }
 :-moz-placeholder {
+  font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   color: #FFF;
 }
 ::-moz-placeholder {
+  font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   color: #FFF;
 }
 :-ms-input-placeholder {
+  font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   color: #FFF;
 }
 .post-input {
@@ -572,7 +540,6 @@ input.post-form {
 }
 #right-menu {
   float:right;
-  padding-right:100px;
 }
 #top-links-wrapper {
   position: fixed;
@@ -591,6 +558,12 @@ input.post-form {
 }
 #header-list {
   padding-top: 12px;
+}
+.ui.horizontal.list > .item {
+  margin-left: .5em;
+}
+.item {
+  vertical-align: top;
 }
 /*
 #top-links {
@@ -642,7 +615,6 @@ footer {
   padding-right: 20px;
   font-size: 12px;
   font-weight: 600;
-  font-family: 'Roboto', sans-serif;
   color: #3f454d;
 }
 .footer-links ul li span {
@@ -652,10 +624,8 @@ footer {
   color: #00cc99;
   font-size: 12px;
   font-weight: 600;
-  font-family: 'Roboto', sans-serif;
 }
 .load-more {
-  font-family: 'Roboto', Arial, sans-serif;
   text-transform: uppercase;
   color: #70767f;
   font-weight: bold;
@@ -746,14 +716,13 @@ footer {
   margin-top: -4px;
 }
 .account li ul {
-  position: absolute;
+  position: relative;
   visibility: hidden;
   text-align: center;
   margin: 0;
-  width: 96px;
   border-radius: 0.3rem;
-  left: -57px;
-  top: 30px;
+  left: -60px;
+  top: 20px;
   padding-top: 20px;
   padding: 0;
 }
@@ -773,7 +742,6 @@ footer {
   width: auto;
   padding: 3px;
   font-size: 13px;
-  font-family: 'Roboto', Arial, sans-serif;
   font-weight: 200;
 }
 /*.comment {
@@ -857,8 +825,8 @@ img#reply {
 .photo-text {
   display: block;
   margin: 0 auto;
-  width: 500px;
-  font-size: 40px;
+  font-size: 30px;
+  margin-top: 40px;
   color: #dee2e5;
   text-align: center;
 }
@@ -954,7 +922,6 @@ img#reply {
   margin-top: 30px;
   margin-bottom: 12px;
   color: #6f767e;
-  font-family: 'Roboto', sans-serif;
   font-weight: 400;
   font-size: 18px;
 }
@@ -962,7 +929,6 @@ img#reply {
   text-decoration: none;
   margin-right: 30px;
   color: #a8abb2;
-  font-family: 'Roboto', sans-serif;
   font-weight: 400;
   font-size: 15px;
   letter-spacing: .5px;
@@ -1022,7 +988,6 @@ label {
   color: #3f454d;
   font-size: 13px;
   font-weight: 600;
-  font-family: 'Roboto', sans-serif;
 }
 .avatar-large img {
   margin-top: 18px;
@@ -1038,9 +1003,8 @@ label {
 }
 input.account,
 input.reply {
-  width: 366px;
+  width: 85%;
   height: 40px;
-  font-family: 'Roboto', Arial, sans-serif;
   color: #3f454d;
   margin-left: 10px;
   font-weight: 600;
@@ -1065,6 +1029,7 @@ input.reply {
   padding: 5px 15px;
 }
 input#account-creds:-moz-placeholder {
+  font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   color: green;
 }
 input.name {
@@ -1188,8 +1153,10 @@ label.css-label {
 }
 .container {
   width: 100%;
+  position: relative;
+  top: 90px;
 }
-.container .header {
+.container .expand {
   padding: 2px;
   cursor: pointer;
   font-weight: bold;
@@ -1200,8 +1167,14 @@ label.css-label {
 #expanded-content {
   background-color: #f9fafc;
   width: 580px;
-  height: 292px;
+  height: 375px;
+  position: relative;
+  top: -50px;
+  margin: 0;
+  padding: 0;
+  width: 100%;
 }
+
 .col1 {
   width: 15%;
   float: left;
@@ -1213,7 +1186,7 @@ label.css-label {
   padding-right: 15px;
 }
 .spacer {
-  height: 30px;
+  height: 50px;
   width: 400px;
 }
 .col-wrapper {
@@ -1233,6 +1206,10 @@ label.css-label {
   font-size: 12px;
   margin-left: 92px;
   padding-bottom: 45px;
+  width: 200px;
+  position: absolute;
+  top: 15px;
+
 }
 .down_facing_arrow,
 .up_facing_arrow {
@@ -1244,12 +1221,12 @@ label.css-label {
 .down_facing_arrow {
   background-image: url(../images/down-arrow-small.png);
 }
-.header {
+.expand {
   height: 4px;
   width: 80px;
   background: url(../images/down-arrow-small.png) no-repeat 57px 8px;
 }
-.header.highlight {
+.expand.highlight {
   background: url(../images/up-arrow-small.png) no-repeat 57px 7px;
 }
 .like {
@@ -1264,371 +1241,238 @@ label.css-label {
   background: url(../images/like.png) no-repeat 0px 0px;
 }
 input::-webkit-input-placeholder {
+  font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   color: #FFF;
 }
 input::-moz-placeholder {
+  font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   color: #FFF;
 }
 input:-ms-input-placeholder {
+  font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   color: #FFF;
 }
 input:-moz-placeholder {
+  font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   color: #FFF;
 }
 input.reply::-webkit-input-placeholder {
+  font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   color: #bec3cc;
 }
 input.reply::-moz-placeholder {
+  font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   color: #bec3cc;
 }
 input.reply:-ms-input-placeholder {
+  font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   color: #bec3cc;
 }
 input.reply:-moz-placeholder {
+  font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   color: #bec3cc;
 }
 input.account::-webkit-input-placeholder {
+  font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   color: #bec3cc;
   padding-top: 2px;
 }
 input.account:-moz-placeholder {
+  font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   color: #bec3cc;
   padding-top: 2px;
 }
 input.account::-moz-placeholder {
+  font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   color: #bec3cc;
   padding-top: 2px;
 }
 input.account:-ms-input-placeholder {
+  font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   color: #bec3cc;
   padding-top: 2px;
 }
-@media only screen and (min-width: 1024px) and (max-width: 1449px) {
-  #menu-bg {
-    height: 340px;
-    background-size: cover;
-  }
-  #top-links {
-    display: inline-block;
-    width: 100%;
-    height: 60px;
-  }
+#mobile-search-icon {
+  display: none;
 }
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
-  #menu-bg {
-    height: 340px;
-    background-size: cover;
-  }
-  #top-links {
-    display: inline-block;
-    width: 100%;
-    height: 60px;
-  }
+#submit-tweet {
+  color: #FFF;
 }
-@media only screen and (min-width: 575px) and (max-width: 767px) {
-  #menu-bg {
-    height: 340px;
-    background-size: cover;
-  }
-  section#posts {
-    width: 500px;
-  }
-  .input {
+#tweet-input {
+  margin-left: 40px;
+}
+#tweet-input > input::-webkit-input-placeholder,
+#tweet-input > input::-moz-placeholder,
+#tweet-input > input:-ms-input-placeholder,
+#tweet-input > input:-moz-placeholder {
+  color: #FFF !important;
+}
+#tweet-input {
+  font-size: 2.7em;
+}
+#send-tweet-icon {
+  cursor: pointer;
+}
+.add-items .ui.basic.button {
+  color: #FFF !important;
+  font-size: 1.2em;
+}
+.add-items .ui.basic.button:hover {
+  color: #CCC !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+i#send-tweet-icon {
+  opacity: 1 !important;
+}
+.ui.list .item a:hover {
+  color: #FF8F00 !important;
+}
+div#feed-section {
+  margin-top: 125px;
+}
+
+
+@media only screen and (max-width: 700px) {
+  .mini.ui.icon input, #input-search-icon {
     display: none;
   }
-  .center-area, .feed, .bottom-align {
-    width: 500px;
-  }
-  #logo {
-    padding-left: 6%;
-  }
-  .menu-top {
-    padding-right: 6%;
-  }
-  #top-links {
-    display: inline-block;
-    width: 100%;
-    height: 60px;
-  }
-  .photo-submit img {
-    width: 100%;
-  }
-  input.post-form {
-    width: 330px;
-  }
-  #expanded-content {
-  background-color: #f9fafc;
-  width: 500px;
-  height: 292px;
-  }
-  .col1 {
-    width: 15%;
-    float: left;
-  }
-  .col2 {
-    width: 84%;
-    float: right;
-    padding-top: 17px;
-    padding-right: 15px;
-  }
-  .spacer {
-    height: 30px;
-    width: 400px;
-  }
-  .col-wrapper {
-    margin-bottom: 40px;
-    border-top: 1px solid #dee2e5;
-    margin-left: 0px;
-    width: 500px;
-    padding-top: 6px;
-    min-height: 40px;
-  }
-  #expand-button {
-    margin-left: 78px;
-  }
-  .expanded-avatar {
-    margin-left: 24px;
-  }
-  #expanded-content {
-    background-color: #f9fafc;
-    width: 580px;
-    height: 442px;
-  }
-  /*
-  #top-links {
-    width: 575px;
-  }
-  #wrap {
-    width: 575px;
-  }
-  .menu-top {
-    margin-right: 25px;
-  }
-  #logo {
-    padding-left: 25px;
-  }
-  ul.menu {
-    padding-left: 86px;
-  }
-  .post-input {
-    width: 400px;
-  }
-  .menu-top {
-    top: 25%;
-    margin-right: 45px;
-  }
-  #search-mobile {
-    display: inline-block;
-    padding-right: 10px;
-  }
-  #message {
-    padding-right: 10px;
-  }
-  #search-icon {
-    padding-right: 8px;
-  }
-  #list {
-    margin-right: 15px;
-  }
-  #grid {
-    margin-right: 50px;
-  }
-  #modal {
-    width: 400px !important;
-    height: 215px !important;
-  }
-  textarea {
-    width: 345px;
-    height: 88px;
-  }
-  .add-items-dark li a {
-    margin-right: 10px;
-  }
-  ul.add-items-dark {
-    width: 372px;
-  }
-  .settings-wrapper {
-    padding-left: 40px;
-  }
-  .save {
-    margin-left: 40px;
-  }
-  input.post-form {
-    width: 330px;
-  }*/
-}
-@media only screen and (min-width: 400px) and (max-width: 574px) {
-  #menu-bg {
-    height: 340px;
-    background-size: cover;
-  }
-  section#posts {
-    width: 400px;
+  #mobile-search-icon {
+    display: block;
+    vertical-align: top;
   }
   .center-area, .feed {
-    width: 400px;
+    width: 85%;
   }
-  .input {
-    display: none;
-  }
-  #logo {
-    padding-left: 7%;
-  }
-  .menu-top {
-    padding-right: 7%;
-  }
-  #top-links {
-    display: inline-block;
-    width: 100%;
-    height: 60px;
-  }
-  .post-content {
-    width: 77%;
-  }
-  #copyright {
-    margin-left: 20%;
-    margin-top: 20px;
-  }
-  #modal {
-    width: 350px !important;
-    height: 215px !important;
-  }
-  textarea {
-    width: 295px;
-    height: 88px;
-  }
-  .add-items-dark li a {
-    margin-right: 0px;
-  }
-  ul.add-items-dark {
-    width: 322px;
-  }
-  input.account {
-    width: 290px;
-  }
-  .settings-wrapper {
-    padding-left: 8px;
-  }
-  .save {
-    margin-left: 8px;
-  }
-  input.post-form {
-    width: 330px;
-  }
-  .comment {
-    min-height: 145px;
-  }
-  .photo-submit img {
-    width: 400px;
-  }
-  input.post-form {
-    width: 330px;
-  }
-  #expand-button {
-    margin-left: 78px;
-  }
-  .expanded-avatar {
-    margin-left: 24px;
-  }
-  #expanded-content {
-    background-color: #f9fafc;
-    width: 580px;
-    height: 442px;
-  }
-  /*
-  #top-links {
-    width: 400px;
-  }
-  #wrap {
-    width: 400px;
-  }
-  .menu-top {
-    margin-right: 25px;
-  }
-  #logo {
-    padding-left: 25px;
-  }
-  ul.menu {
-    padding-left: 86px;
-  }
-  .post-input {
-    width: 300px;
-    border-radius: 0;
-    padding-top: 20px;
-  }
-  .menu-top {
-    top: 25%;
-    margin-right: 45px;
-  }
-  .input {
-    display: none;
-  }
-  #search-mobile {
-    display: inline-block;
-    padding-right: 10px;
-  }
-  #message {
-    padding-right: 10px;
-  }
-  #search-icon {
-    padding-right: 8px;
-  }
-  .footer-links ul {
-    padding-left: 60px;
-  }
-  .photo-text {
-    width: 400px;
-    font-size: 30px;
-  }
-  ul.menu {
-    padding-left: 35px;
+  div#tweet-input {
+    width: 95%;
+    margin-left: 2.5%;
   }
   .add-items {
-    bottom: 15px;
+    width: 100%;
+    margin-left: -3.5%;
   }
-  .bottom-align {
-    width: 400px;
+  #tweet-input {
+    font-size: 2.1em;
   }
-  .bottom-align ul li a {
-    padding: 0 0px 14px 0px;
+  section#posts {
+    width: 95%;
+    margin-left: 2.5%;
   }
-  .bottom-align ul li {
-    padding-right: 10px;
-  }
-  .menu {
-    margin-right: 70px;
+  #expanded-content {
+    width: 100%;
   }
   .post-content {
-    width: 77%;
+    width: 82%;
   }
-  #copyright {
+  .photo-submit img {
+    width: 100%;
+  }
+  .footer-links.center-area {
+    width: 100%;
+  }
+  li#copyright {
     margin-left: 20%;
     margin-top: 20px;
   }
-  #modal {
-    width: 350px !important;
-    height: 215px !important;
+  .footer-links ul {
+    padding-left: 3em;
   }
-  textarea {
-    width: 295px;
-    height: 88px;
+  #expanded-content {
+    margin: 0;
+    padding: 0;
+    width: 100%;
   }
-  .add-items-dark li a {
-    margin-right: 0px;
+  .col-wrapper {
+    width: 100%;
   }
-  ul.add-items-dark {
-    width: 322px;
+  .col2 {
+    width: 81%;
   }
-  input.account {
-    width: 290px;
+  input.reply {
+    width: 88%;
   }
-  .settings-wrapper {
-    padding-left: 8px;
+  #expand-button {
+    margin-left: 18%;
   }
-  .save {
-    margin-left: 8px;
+  .bottom-align {
+    width: 83%;
   }
-  input.post-form {
-    width: 330px;
-  }*/
 }
+
+@media only screen and (min-width: 526px) and (max-width: 630px) {
+  li#copyright {
+    margin-left: 18%;
+    margin-top: 20px;
+  }
+  .footer-links ul {
+    padding-left: 25%;
+  }
+  input.reply {
+    width: 88%;
+  }
+  #expand-button {
+    margin-left: 18%;
+  }
+  #tweet-input {
+    font-size: 2.1em;
+  }
+  .bottom-align {
+    width: 83%;
+  }
+  .post-content {
+    width: 82%;
+  }
+  .bottom-align ul li {
+    padding-right: 5px;
+  }
+}
+
+@media only screen and (max-width: 525px) {
+  .mini.ui.icon input, #input-search-icon {
+    display: none;
+  }
+  .add-items .ui.basic.button {
+    color: #FFF !important;
+    font-size: .9em;
+  }
+  #tweet-input {
+    font-size: 1.9em;
+  }
+  .add-items {
+    bottom: 0px;
+    margin-left: -11.5%;
+  }
+  li#copyright {
+    margin-left: 19%;
+    margin-top: 20px;
+  }
+  .footer-links ul {
+    padding-left: 20%;
+  }
+  input.reply {
+    width: 85%;
+  }
+  #expand-button {
+    top: 45px;
+    margin-left: 18%;
+  }
+  .feed-box {
+    min-height: 176px;
+  }
+  #tweet-input {
+    font-size: 1.7em;
+  }
+  .bottom-align {
+    width: 83%;
+  }
+  .post-content {
+    width: 82%;
+  }
+  .bottom-align ul li {
+    padding-right: 5px;
+  }
+}
+
+

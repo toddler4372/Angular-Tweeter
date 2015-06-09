@@ -1,5 +1,5 @@
 {
-  "name": "SimplySocial",
+  "name": "tweetersocial",
   "version": "0.0.0",
   "dependencies": {
     "angular": "1.2.16",
@@ -14,12 +14,16 @@
     "angularfire": "0.8.2",
     "angular-mocks": "~1.2.x",
     "angular-loader": "1.2.x",
-    "html5-boilerplate": "*"
+    "semantic-ui": "*"
   },
   "devDependencies": {
     "angular-mocks": "1.2.16",
     "angular-scenario": "1.2.16"
   },
+  "main": [
+    "bower_components/semantic-ui/dist/semantic.css",
+    "bower_components/semantic-ui/dist/semantic.js"
+  ],
   "keywords": [
     "semantic",
     "ui",
@@ -29,6 +33,10 @@
   "license": [
     "http://semantic-ui.mit-license.org/"
   ],
+  "ignore": [
+    "bower_components/semantic-ui/src/site",
+    "bower_components/semantic-ui/test"
+  ], 
   "appPath": "app",
   "resolutions": {
     "angular": "1.2.16"

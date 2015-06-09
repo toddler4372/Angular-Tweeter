@@ -25,7 +25,7 @@
 				</div>
 			</div>
 			<div class="container">
-				<div class="header" id="expand-button"><span>Expand</span></div>
+				<div class="expand" id="expand-button"><p>Expand</p></div>
 				<div class="post-content no-margins" id="expanded-content">
 					<div class="col-wrapper">
 						<div class="col1">
@@ -75,7 +75,7 @@
 						</div>
 					</div>
 
-					<div class="spacer" style="height: 50px;"></div>
+					<div class="spacer"></div>
 
 					<div class="col-wrapper">
 						<input type="text" placeholder="Reply..." class="reply" maxlength="30">
@@ -202,15 +202,15 @@
 
 <!-- COLLAPSIBLE DIV -->
 <script>
-$(".header").click(function () {
-	$header = $(this);
+$(".expand").click(function () {
+	$expand = $(this);
 	    //getting the next element
-	    $content = $header.next();
+	    $content = $expand.next();
 	    //open up the content needed - toggle the slide- if visible, slide up, if not slidedown.
 	    $content.slideToggle(200, function () {
 	        //execute this after slideToggle is done
-	        //change text of header based on visibility of content div
-	        $header.text(function () {
+	        //change text of expand based on visibility of content div
+	        $expand.text(function () {
 	            //change text based on condition
 	            return $content.is(":visible") ? "Collapse" : "Expand";
 	        });
@@ -221,8 +221,8 @@ $(".header").click(function () {
 <!--  TOGGLE FUNCTION EXPAND BUTTON -->
 <script>
 $(document).ready(function() {
-	$('.header').click(function () {
-		$('.header').toggleClass("highlight");
+	$('.expand').click(function () {
+		$('.expand').toggleClass("highlight");
 	});
 });
 </script>

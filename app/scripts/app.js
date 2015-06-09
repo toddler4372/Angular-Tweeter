@@ -9,7 +9,7 @@
  * Main module of the application.
  */
 angular
-  .module('angularSimplySocialApp', [
+  .module('tweetersocial', [
     'ngAnimate',
     'ngCookies',
     'ngResource',

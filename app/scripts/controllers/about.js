@@ -7,7 +7,7 @@
  * # AboutCtrl
  * Controller of the angularSimplySocialApp
  */
-angular.module('angularSimplySocialApp')
+angular.module('tweetersocial')
   .controller('AboutCtrl', function ($scope) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
