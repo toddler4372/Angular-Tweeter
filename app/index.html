@@ -66,8 +66,8 @@
               <div id="menu-bg">
                 <div class="post-input center-area vertical-align">
                   <div class="center-area middle-align">
-                    <div class="massive ui transparent icon input" id="tweet-input"><input type="text" placeholder="What's on your brain?"><i class="white send icon" id="send-tweet-icon"></i></div>
-                      <ul class="add-items">
+                    <div class="massive ui inverted transparent icon input" id="tweet-input"><input type="text" placeholder="What's on your brain?"><i class="white send icon" id="send-tweet-icon"></i></div>
+                      <!--<ul class="add-items">
                         <li>
                           <a href="">
                             <div class="ui basic button">
@@ -84,13 +84,27 @@
                             </div>
                           </a>
                         </li>
-                      </ul>
+                      </ul>-->
+                      <div class="ui relaxed horizontal list">
+                        <div class="item">
+                          <i class="large white icon photo"></i>
+                          <div class="content aligned">
+                            <a class="white header">Add Photo</a>
+                          </div>
+                        </div>
+                        <div class="item">
+                          <i class="large white icon video play"></i>
+                          <div class="content aligned">
+                            <a class="header">Add Video</a>
+                          </div>
+                        </div>
+                      </div>
                   </div>
                 </div>
                   <div class="center-area">
                     <div class="bottom-align">
                       <ul class="menu">
-                        <li><a href="#/allPosts">All Posts</a></li>
+                        <li><a href="#/allPosts">My Feed</a></li>
                         <li><a href="#/Photos">Photos</a></li>
                         <li><a href="#/Videos">Videos</a></li>
                         <li><a href="" style="border-bottom:none;"><img src="images/grid-view.png" alt="Grid View" id="grid"></a></li>
@@ -127,14 +141,18 @@
     <div ng-view id="feed-section"></div>
 
     <footer>
-      <div class="footer-links center-area">
-        <ul>
-            <li><a href="">ABOUT US</a></li>
-            <li><a href="">SUPPORT</a></li>
-            <li><a href="">PRIVACY</a></li>
-            <li><a href="">TERMS</a></li>
-            <li id="copyright"><span>&copy;</span> 2015 TWEETER</li>
-        </ul>
+      <div class="center-area" style="text-align: center;">
+        <div class="ui horizontal bulleted link list">
+          <a class="item">
+            Terms and Conditions
+          </a>
+          <a class="item">
+            Privacy Policy
+          </a>
+          <div class="item">
+            &copy;2015 Tweeter
+          </div>
+        </div>
       </div>
     </footer>
   </div>
@@ -178,45 +196,6 @@
   <script src="components/version/interpolate-filter.js"></script>
   <script src="js/modal.js"></script>
   <!-- endbuild -->
-  
-  <!-- DROPDOWN -->
-  <script>
-    $(document).ready(function() {
-      $('.account > li').bind('mouseover', openSubMenu);
-      $('.account > li').bind('mouseout', closeSubMenu);
-      
-      function openSubMenu() {
-        $(this).find('ul').css('visibility', 'visible');  
-      };
-      
-      function closeSubMenu() {
-        $(this).find('ul').css('visibility', 'hidden'); 
-      };
-             
-    });
-  </script>
-
-  <!-- MODAL DROPDOWN -->
-  <script>
-    $( "#hide-header" ).click(function() {
-      $( "#menu-bg" ).hide() 
-    });
-  </script>
-
-  <script>
-    $( "#logo-home" ).click(function() {
-      $( "#menu-bg" ).show() 
-    });
-  </script>
-
-  <!-- COLLAPSIBLE DIV -->
-  <script>
-    $(document).ready(function(){
-        $(".btn-primary").click(function(){
-            $(".collapse").collapse('toggle');
-        });
-    });
-  </script>
 
   <!-- SEMANTIC MODAL DROPDOWN -->
   <script>

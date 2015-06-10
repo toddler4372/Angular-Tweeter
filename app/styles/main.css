@@ -328,7 +328,7 @@ li {
 }
 body {
   background: #FFF;
-  overflow: hidden;
+  /*overflow: hidden;*/
   width: 100%;
 }
 #message {
@@ -1229,7 +1229,7 @@ label.css-label {
 .expand.highlight {
   background: url(../images/up-arrow-small.png) no-repeat 57px 7px;
 }
-.like {
+/*.like {
   cursor: pointer;
   height: 13px;
   width: 13px;
@@ -1239,7 +1239,7 @@ label.css-label {
 }
 .like.click {
   background: url(../images/like.png) no-repeat 0px 0px;
-}
+}*/
 input::-webkit-input-placeholder {
   font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   color: #FFF;
@@ -1300,6 +1300,7 @@ input.account:-ms-input-placeholder {
 }
 #tweet-input {
   margin-left: 40px;
+  margin-bottom: 15px;
 }
 #tweet-input > input::-webkit-input-placeholder,
 #tweet-input > input::-moz-placeholder,
@@ -1332,6 +1333,10 @@ i#send-tweet-icon {
 div#feed-section {
   margin-top: 125px;
 }
+.ui.relaxed.horizontal.list {
+  width: 90%;
+  margin-left: 20%;
+}
 
 
 @media only screen and (max-width: 700px) {
@@ -1343,11 +1348,12 @@ div#feed-section {
     vertical-align: top;
   }
   .center-area, .feed {
-    width: 85%;
+    width: 95%;
+    margin-left: 2.5% !important;
   }
   div#tweet-input {
-    width: 95%;
-    margin-left: 2.5%;
+    width: 85%;
+    margin-left: 7.5%;
   }
   .add-items {
     width: 100%;
@@ -1355,6 +1361,7 @@ div#feed-section {
   }
   #tweet-input {
     font-size: 2.1em;
+    margin-bottom: 15px;
   }
   section#posts {
     width: 95%;
@@ -1398,7 +1405,18 @@ div#feed-section {
   }
   .bottom-align {
     width: 83%;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
   }
+  .menu {
+    margin-right: 0px;
+  }
+  div.extra.images a img {margin-top: 1em;}
+  .ui.relaxed.horizontal.list {
+    width: 90%;
+    margin-left: 10%;
+  }
+  .feed.ui > .event > .content .images.extra img {margin-bottom: .5em;}
 }
 
 @media only screen and (min-width: 526px) and (max-width: 630px) {
@@ -1417,9 +1435,14 @@ div#feed-section {
   }
   #tweet-input {
     font-size: 2.1em;
+    width: 85%;
+    margin-left: 7.5%;
+    margin-bottom: 15px;
   }
   .bottom-align {
     width: 83%;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
   }
   .post-content {
     width: 82%;
@@ -1427,6 +1450,19 @@ div#feed-section {
   .bottom-align ul li {
     padding-right: 5px;
   }
+  .add-items {
+    width: 100%;
+    margin-left: -3.5%;
+  }
+  .menu {
+    margin-right: 0px;
+  }
+  div.extra.images a img {margin-top: 1em;}
+  .ui.relaxed.horizontal.list {
+    width: 90%;
+    margin-left: 10%;
+  }
+  .feed.ui > .event > .content .images.extra img {margin-bottom: .5em;}
 }
 
 @media only screen and (max-width: 525px) {
@@ -1439,10 +1475,13 @@ div#feed-section {
   }
   #tweet-input {
     font-size: 1.9em;
+    width: 85%;
+    margin-left: 7.5%;
+    margin-bottom: 15px;
   }
   .add-items {
     bottom: 0px;
-    margin-left: -11.5%;
+    width: 100%;
   }
   li#copyright {
     margin-left: 19%;
@@ -1463,9 +1502,12 @@ div#feed-section {
   }
   #tweet-input {
     font-size: 1.7em;
+    margin-bottom: 15px;
   }
   .bottom-align {
     width: 83%;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
   }
   .post-content {
     width: 82%;
@@ -1473,6 +1515,20 @@ div#feed-section {
   .bottom-align ul li {
     padding-right: 5px;
   }
+  .menu {
+    margin-right: 0px;
+  }
+  .ui.relaxed.horizontal.list {
+    width: 90%;
+    margin-left: 10%;
+  }
+  .list.relaxed.horizontal.ui > .item {
+    padding-left: 0;
+  }
+  .list.ui .list > .item > .image + .content, .list.ui .list > .item > .icon + .content, .list.ui > .item > .image + .content, .list.ui > .item > .icon + .content {
+    padding-left: 0;
+  }
+  .feed.ui > .event > .content .images.extra img {margin-bottom: .5em;}
 }
 
 
