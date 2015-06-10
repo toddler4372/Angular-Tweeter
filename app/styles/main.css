@@ -953,10 +953,11 @@ input[type="submit"]:active {
   height: 100%;
   background: transparent;
   min-height: 156px;
-  overflow: hidden;
   margin-top: 60px;
   position: relative;
   border-bottom: 1px solid #dee1e6;
+  width: 100%;
+  padding-left: 5%;
 }
 @media all and (-ms-high-contrast: none),(-ms-high-contrast: active) {
   h1 {
@@ -1337,7 +1338,37 @@ div#feed-section {
   width: 90%;
   margin-left: 20%;
 }
-
+.ui.toggle.checkbox input[type="checkbox"]:checked ~ .box:before, .ui.toggle.checkbox input[type="checkbox"]:checked ~ label:before, .ui.toggle.checkbox input[type="radio"]:checked ~ .box:before, .ui.toggle.checkbox input[type="radio"]:checked ~ label:before {
+  background-color: #0054c6;
+}
+.ui.toggle.checkbox .box, .ui.toggle.checkbox label {
+  font-weight: normal;
+  color: rgba(0, 0, 0, 0.8);
+}
+.ui.toggle.checkbox input[type="checkbox"]:checked ~ .box, .ui.toggle.checkbox input[type="checkbox"]:checked ~ label, .ui.toggle.checkbox input[type="radio"]:checked ~ .box, .ui.toggle.checkbox input[type="radio"]:checked ~ label {
+  color: rgba(0, 0, 0, 0.8);
+  font-weight: bold;
+}
+.ui.checkbox .box, .ui.checkbox label {
+  font-size: 1em;
+  font-weight: normal;
+}
+.ui.checkbox input[type="checkbox"]:checked ~ .box, .ui.checkbox input[type="checkbox"]:checked ~ label, .ui.checkbox input[type="radio"]:checked ~ .box, .ui.checkbox input[type="radio"]:checked ~ label {
+  color: rgba(0, 0, 0, 0.8);
+  font-weight: bold;
+}
+.ui.blue.button {
+  background-color: #0054c6;
+  color: #FFF;
+}
+.save {
+  margin-top: 20px;
+  margin-left: 5%;
+}
+.ui.relaxed.list > .item .header {
+  color: #FFF !important;
+  font-size: 1.2em;
+}
 
 @media only screen and (max-width: 700px) {
   .mini.ui.icon input, #input-search-icon {
@@ -1417,6 +1448,9 @@ div#feed-section {
     margin-left: 10%;
   }
   .feed.ui > .event > .content .images.extra img {margin-bottom: .5em;}
+  .ui.relaxed.list > .item .header {
+    font-size: 1em;
+  }
 }
 
 @media only screen and (min-width: 526px) and (max-width: 630px) {
@@ -1463,6 +1497,9 @@ div#feed-section {
     margin-left: 10%;
   }
   .feed.ui > .event > .content .images.extra img {margin-bottom: .5em;}
+  .ui.relaxed.list > .item .header {
+    font-size: 1em;
+  }
 }
 
 @media only screen and (max-width: 525px) {
@@ -1529,6 +1566,9 @@ div#feed-section {
     padding-left: 0;
   }
   .feed.ui > .event > .content .images.extra img {margin-bottom: .5em;}
+  .ui.relaxed.list > .item .header {
+    font-size: 1em;
+  }
 }
 
 
