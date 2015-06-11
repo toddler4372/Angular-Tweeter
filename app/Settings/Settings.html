@@ -1,11 +1,16 @@
 <section id="posts">
-<div class="ui large feed">
-				<a class="avatar-large">
-					<div class="center"><label>ACCOUNT</label>
-						<img src="images/avatar-large.jpg">
-						<div id="change-avatar"></div>
-					</div>
-				</a>
+	<div class="ui large feed" id="settings">
+		<h1>Settings</h1>
+				<div class="avatar-col">
+					<a class="avatar-large">
+						<div class="center"><label>ACCOUNT</label>
+							<img src="images/avatar-large.jpg">
+							<div class="ui button" id="change-avatar">
+							  Change
+							</div>
+						</div>
+					</a>
+				</div>
 				<div id="account-creds">
 					<!--<ul>
 						<li><input type="text" placeholder="Username" class="account name" maxlength="30"></li>
@@ -13,23 +18,24 @@
 						<li><input type="password" placeholder="Password" class="account password" maxlength="30"><a href="" id="change-pw"></a></li>
 					</ul>-->
 					<div class="ui fluid left icon input">
-					  <input type="text" placeholder="Search users...">
-					  <i class="users icon"></i>
+					  <input type="text" placeholder="Username">
+					  <i class="user icon"></i>
 					</div>
 					<div class="ui fluid left icon input">
-					  <input type="text" placeholder="Search users...">
-					  <i class="users icon"></i>
+					  <input type="email" placeholder="Email">
+					  <i class="envelope icon"></i>
 					</div>
 					<div class="ui fluid left icon input">
-					  <input type="text" placeholder="Search users...">
-					  <i class="users icon"></i>
+					  <input type="password" placeholder="Password">
+					  <i class="unlock icon"></i>
 					</div>
 				</div>
 			</div>
 
+		<div style="height:10px;width:100%;"></div>
 
 		<div class="comments">
-			<div class="comment"><label>NOTIFICATIONS</label>
+			<div class="comment" id="options-area"><label>NOTIFICATIONS</label>
 				<div class="notification">
 					<div class="inline field">
 					    <div class="ui toggle checkbox">
@@ -67,7 +73,7 @@
 
 
 		<div class="comments">
-			<div class="comment"><label>PRIVACY</label>
+			<div class="comment" id="options-area"><label>PRIVACY</label>
 				<div class="notification-toggle">
 					<div class="ui checkbox">
 					    <input type="checkbox" name="fun">
@@ -90,7 +96,7 @@
 		</div>
 
 	<div class="save">
-		<div class="ui blue button">Save Changes</div>
+		<div class="ui large blue button">Save Changes</div>
 	</div>
 	<br>
 	<br>

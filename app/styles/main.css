@@ -976,9 +976,9 @@ input[type="submit"]:active {
 }
 #account-creds {
   float: right;
-  width: 80%;
+  width: 75%;
   text-align: left;
-  margin-top: 39px;
+  margin-top: 60px;
   margin-bottom: 20px;
 }
 #account-creds ul {
@@ -995,12 +995,8 @@ label {
 }
 #change-avatar {
   width: 85px;
-  height: 25px;
-  border: 1px solid #bec3cc;
-  border-radius: 0.3rem;
+  height: 35px;
   margin-top: 10px;
-  background: transparent;
-  background: url(../images/change.jpg) no-repeat scroll 20px 6px;
 }
 input.account,
 input.reply {
@@ -1357,7 +1353,7 @@ div#feed-section {
   color: rgba(0, 0, 0, 0.8);
   font-weight: bold;
 }
-.ui.blue.button {
+.ui.blue.button, .ui.blue.button:hover {
   background-color: #0054c6;
   color: #FFF;
 }
@@ -1369,8 +1365,32 @@ div#feed-section {
   color: #FFF !important;
   font-size: 1.2em;
 }
+.ui.fluid.left.icon.input {
+  margin-bottom: 12px;
+}
+.ui.large.feed {
+  padding-left: 5%;
+  padding-right: 2.5%;
+}
+#options-area {
+  padding: 0 5% 7.5% 5%;
+}
+#settings {
+  padding-left: 5%;
+  padding-right: 5%;
+  height: 270px;
+}
+.ui.rating {
+  float: right;
+}
+.summary img {
+  height: auto !important;
+}
 
 @media only screen and (max-width: 700px) {
+  #menu-bg {
+    height: 325px;
+  }
   .mini.ui.icon input, #input-search-icon {
     display: none;
   }
@@ -1378,9 +1398,11 @@ div#feed-section {
     display: block;
     vertical-align: top;
   }
-  .center-area, .feed {
+  .feed {
     width: 95%;
-    margin-left: 2.5% !important;
+  }
+  .center-area {
+    width: 85%;
   }
   div#tweet-input {
     width: 85%;
@@ -1435,7 +1457,7 @@ div#feed-section {
     margin-left: 18%;
   }
   .bottom-align {
-    width: 83%;
+    width: 78%;
     padding-left: 2.5%;
     padding-right: 2.5%;
   }
@@ -1454,6 +1476,9 @@ div#feed-section {
 }
 
 @media only screen and (min-width: 526px) and (max-width: 630px) {
+  #menu-bg {
+    height: 325px;
+  }
   li#copyright {
     margin-left: 18%;
     margin-top: 20px;
@@ -1474,7 +1499,7 @@ div#feed-section {
     margin-bottom: 15px;
   }
   .bottom-align {
-    width: 83%;
+    width: 78%;
     padding-left: 2.5%;
     padding-right: 2.5%;
   }
@@ -1500,9 +1525,15 @@ div#feed-section {
   .ui.relaxed.list > .item .header {
     font-size: 1em;
   }
+  #account-creds {
+    width: 60%;
+  }
 }
 
 @media only screen and (max-width: 525px) {
+  #menu-bg {
+    height: 325px;
+  }
   .mini.ui.icon input, #input-search-icon {
     display: none;
   }
@@ -1538,13 +1569,13 @@ div#feed-section {
     min-height: 176px;
   }
   #tweet-input {
-    font-size: 1.7em;
+    font-size: 1.6em;
     margin-bottom: 15px;
   }
   .bottom-align {
-    width: 83%;
-    padding-left: 2.5%;
-    padding-right: 2.5%;
+    width: 75%;
+    padding-left: 2%;
+    padding-right: 2%;
   }
   .post-content {
     width: 82%;
@@ -1568,6 +1599,9 @@ div#feed-section {
   .feed.ui > .event > .content .images.extra img {margin-bottom: .5em;}
   .ui.relaxed.list > .item .header {
     font-size: 1em;
+  }
+  #account-creds {
+    width: 68%;
   }
 }
 

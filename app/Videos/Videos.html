@@ -6,7 +6,7 @@
 	        <img src="/images/video1.jpg">
 	      </div>
 	      <div class="extra content">
-		    <i class="like icon"></i>
+		    <div class="ui star rating" data-max-rating="1"></div>
 		    2 Likes
 		  </div>
 	    </div>
@@ -17,7 +17,7 @@
 	        <img src="/images/video2.jpg">
 	      </div>
 	      <div class="extra content">
-		    <i class="like icon"></i>
+		    <div class="ui star rating" data-max-rating="1"></div>
 		    2 Likes
 		  </div>
 	    </div>
@@ -28,7 +28,7 @@
 	        <img src="/images/video3.jpg">
 	      </div>
 	      <div class="extra content">
-		    <i class="like icon"></i>
+		    <div class="ui star rating" data-max-rating="1"></div>
 		    3 Likes
 		  </div>
 	    </div>
@@ -39,7 +39,7 @@
 	        <img src="/images/video4.jpg">
 	      </div>
 	      <div class="extra content">
-		    <i class="like icon"></i>
+		    <div class="ui star rating" data-max-rating="1"></div>
 		    7 Likes
 		  </div>
 	    </div>
@@ -50,7 +50,7 @@
 	        <img src="/images/video5.jpg">
 	      </div>
 	      <div class="extra content">
-		    <i class="like icon"></i>
+		    <div class="ui star rating" data-max-rating="1"></div>
 		    4 Likes
 		  </div>
 	    </div>
@@ -61,7 +61,7 @@
 	        <img src="/images/video6.jpg">
 	      </div>
 	      <div class="extra content">
-		    <i class="like icon"></i>
+		    <div class="ui star rating" data-max-rating="1"></div>
 		    4 Likes
 		  </div>
 	    </div>
@@ -84,7 +84,7 @@
 			        <img src="/images/video7.jpg">
 			      </div>
 			      <div class="extra content">
-				    <i class="like icon"></i>
+				    <div class="ui star rating" data-max-rating="1"></div>
 				    8 Likes
 				  </div>
 			    </div>
@@ -95,7 +95,7 @@
 			        <img src="/images/video8.jpg">
 			      </div>
 			      <div class="extra content">
-				    <i class="like icon"></i>
+				    <div class="ui star rating" data-max-rating="1"></div>
 				    3 Likes
 				  </div>
 			    </div>
@@ -106,7 +106,7 @@
 			        <img src="/images/video9.jpg">
 			      </div>
 			      <div class="extra content">
-				    <i class="like icon"></i>
+				    <div class="ui star rating" data-max-rating="1"></div>
 				    5 Likes
 				  </div>
 			    </div>
@@ -122,4 +122,16 @@
     $('.ui.accordion')
 	  .accordion('exclusive', 'true')
 	;
+  </script>
+
+<!-- SEMANTIC STAR -->
+  <script>
+  $('.ui.rating')
+	  .rating()
+	;
+  </script>
+
+<!-- SEMANTIC VIDEO -->
+  <script>
+  $('.ui.video').video();
   </script>
